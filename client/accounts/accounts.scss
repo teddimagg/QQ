@@ -1,0 +1,66 @@
+@import "../../default";
+
+.acclogin, .accreg
+{
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	input
+	{
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: 0;
+
+		&:focus
+		{
+			outline: none;
+		}
+	}
+
+	p, a
+	{
+		color: white;
+	}
+
+	a
+	{
+		float: right;
+	}
+}
+
+.accbtn
+{
+	text-transform: uppercase;
+	padding: 10px;
+	height: 40px;
+	float: left;
+	margin-bottom: 20px;
+	border: 0;
+	color: white;
+}
+
+.acclg
+{
+	background-color: $gg;
+	margin-right: 10px;
+	width: calc(70% - 10px);
+}
+
+.accfb
+{
+	background-color: #3B5998;
+	width: 30%;
+}
+
+.btnlogout
+{
+	background-color: $gg;
+	width: 100%;
+}
+
+.accrg
+{
+	background-color: $red;
+	width: 100%;
+}

@@ -1,0 +1,80 @@
+@import "../../default";
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+
+.cont
+{
+	width: 100%;
+	max-width: 1000px;
+
+	margin: 0 auto;
+	padding: 20px;	
+}
+
+.sharedheader
+{
+	z-index: 1;
+	height: 75px;
+	background:
+	{
+		color: $gg;
+	}
+
+	h1
+	{
+		color: white;
+		font-family: 'Luckiest Guy', cursive;
+		font-size: 50px;
+		padding: 10px 30px;
+		margin: 0;
+		float: left;
+	}
+
+	.profile
+	{
+		height: 100%;
+		width: 75px;
+		float: right;
+		background:
+		{
+			color: $red;
+		}
+
+		i
+		{
+			color: white;
+			padding: 16px 21px;
+			&:hover
+			{
+				cursor: pointer;
+			}
+		}
+	}
+
+	p
+	{
+		text-transform: uppercase;
+		color: $g;
+		display: inline;
+		float: right;
+		margin: 25px;
+	}
+}
+
+.sharedheader2
+{
+	height: 10px;
+	background-color: $purple;
+}
+
+#profiledrop
+{
+	position: absolute;
+	top: 75px;
+	right: -300px;
+	width: 300px;
+	max-width: 100%;
+	background-color: $red;
+
+	transition: all 0.1s ease-in;
+	z-index: 0;
+}

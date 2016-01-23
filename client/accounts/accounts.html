@@ -1,0 +1,24 @@
+<template name="register">
+    <form class="accreg">
+    {{#if currentUser}}
+        <h3>You are already registered and signed in {{currentUser.profile.name}}!</h3>
+    {{else}}
+        <input type="email"  class="accinput" id="email" value="" placeholder="Email">
+        <input type="text" name="" class="accinput" id="name" value="" placeholder="Name">
+        <input type="password" name="" class="accinput" id="password" value="" placeholder="Password">
+        <button type="submit" class="accbtn accrg">Register</button>
+    {{/if}}
+    </form>
+</template>
+ 
+<template name="login">
+        <form class="acclogin">
+            <p> Not a member? <a href="register">Register here!</a></p>
+            <input type="email"  class="accinput" id="email" value="" placeholder="Email">
+            
+            <input type="password" name="" class="accinput" id="password" value="" placeholder="Password">
+        
+            <button type="submit" class="accbtn acclg">Login</button>                       
+            <button  class="accbtn accfb"><i class="fa fa-facebook fa-2x"></i></button>
+        </form>
+</template>

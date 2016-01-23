@@ -1,0 +1,27 @@
+<template name="shared">
+	<div class="sharedheader">
+		<a href="/"><h1>QQ</h1></a>
+		<div class="profile">
+			<i class="fa fa-user fa-3x"></i>
+		</div>
+		{{#if currentUser}}
+		<p>{{currentUser.profile.name}}</p>
+		{{else}}
+		<p>Not logged in</p>
+		{{/if}}
+	</div>
+	<div class="sharedheader2"></div>
+	<div id="profiledrop">
+	{{#if currentUser}}
+	<form class="acclogin">
+		<p>Eitthvað megakúl account statistics kemur hér heheh ;)</p>
+		<button class="accbtn btnlogout">Logout</button>
+	</form>
+	{{else}}
+	{{> login}}
+	{{/if}}
+	</div>
+	<div class="cont">
+		{{> yield}}
+	</div>
+</template>

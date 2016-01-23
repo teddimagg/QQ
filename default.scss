@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+//Color declarations
+$blue: 		#6ed3cf;
+$purple: 	#9068be;
+$white: 	#e1e8f0;
+$red:		#e62739;
+$g:			#7a7a7a;
+$gg:		#565656;
+$ggg:		#323232;
+
+//Overflower
+body
+{
+	overflow-x: hidden;
+	background-color: $white;
+	font-family: 'Raleway', sans-serif;
+}
+
+//Selected text color
+::selection {
+  background: $purple; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $purple; /* Gecko Browsers */
+}
