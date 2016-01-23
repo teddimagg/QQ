@@ -13,6 +13,8 @@ Template.register.events({
         Accounts.createUser(user,function(err){
             if(!err) {
                 Router.go('/');
+                $('#profiledrop').css("right","-300px");
+                Session.set('login', false);
             }
         });
     }
@@ -25,13 +27,15 @@ Template.login.events({
         var password = event.target.password.value;
         
         Meteor.loginWithPassword(email,password,function(err){
-            
+            $('#profiledrop').css("right","-300px");
+            Session.set('login', false);
         }); 
     },
     'click .accfb':function(event){
         event.preventDefault();
         Meteor.loginWithFacebook(function(err){
-            
+            $('#profiledrop').css("right","-300px");
+            Session.set('login', false);
         });
     }
 });

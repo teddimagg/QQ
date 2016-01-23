@@ -3,5 +3,7 @@ Template.shared.events({
         event.preventDefault();
         Meteor.logout();
         Router.go('/');
+        $('#profiledrop').css("right","-300px");
+		Session.set('login', false);
     }
 });

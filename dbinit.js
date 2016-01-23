@@ -1,1 +1,2 @@
-Schools = new Mongo.Collection("schools");
+Schools = new Meteor.Collection("schools");
+Courses = new Meteor.Collection("courses");

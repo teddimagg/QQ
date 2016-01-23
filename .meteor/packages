@@ -24,5 +24,6 @@ fortawesome:fontawesome
 accounts-password
 accounts-facebook
 accounts-ui
-mrt:bootstrap-3
 lepozepo:cloudinary
+themeteorchef:jquery-validation
+mrt:bootstrap-3

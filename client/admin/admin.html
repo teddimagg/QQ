@@ -1,0 +1,22 @@
+<template name="admin">
+	<h2>Your admin panel</h2>
+	<h3>Add a school</h3>
+	<form class="adminform addschool">
+		<input type="text" id="name" placeholder="name" required/>
+		<input type="text" id="url" placeholder="logo" required/>
+		<input type="text" id="country" placeholder="country" required/>
+		<button type="submit">ADD</button>
+	</form>
+	<h3>Add a course</h3>
+	<form class="adminform addcourse">
+		<input type="text" id="name" placeholder="name" required/>
+		<input type="text" id="id" placeholder="id" required/>
+		<select name="school">
+			{{#each schools}}
+			<option data-id="{{_id}}">{{name}}</option>
+			{{/each}}
+		</select>
+
+		<button type="submit">ADD</button>
+	</form>
+</template>
