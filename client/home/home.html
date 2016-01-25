@@ -2,21 +2,18 @@
     <h2>Welcome {{currentUser.profile.name}}</h2>
     <h3>Find your courses here and master them in no-time!</h3>
 
-    <input type="text" class="homesearch" placeholder="Search for school, course or courseid. example: 'Reykjavík University' or 'Linear Algebra" />
+    <input type="text" class="homesearch" placeholder="Search for school, course or courseid. example: 'Reykjavík University' or 'Linear Algebra'" />
 
-    {{> schools}}
+    {{> category}}
 </template>
 
-<template name="schools">
-	<h4>Schools</h4>
-	<div class="schoolview">
-		{{#each schools}}
-		<a href="/school/{{_id}}">
-			<div class="school">
-				<img src="{{img}}"/>
-				<p>{{name}}</p>
-			</div>
-		</a>
-		{{/each}}
+<template name="category">	
+	<div class="catcont">
+	{{#each cats}}
+		<div class="catview">
+			<i class="fa fa-{{icon}}"></i>
+			<p>{{name}}</p>
+		</div>
+	{{/each}}
 	</div>
 </template>

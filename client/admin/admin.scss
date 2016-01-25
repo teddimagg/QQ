@@ -29,3 +29,38 @@
 		color: $red;
 	}
 }
+
+.adminspan
+{
+	margin-top: 40px;
+}
+
+.adminlist
+{
+	width: 30%;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+	float: left;
+
+	//overflow-y: scroll;
+	height: 200px;
+
+	li
+	{
+		width: 100%;
+
+		&:hover
+		{
+			background-color: rgba(white, 0.6);
+			cursor: pointer;
+		}
+
+		i
+		{
+			float: right;
+			color: $red;
+		}
+	}
+}

@@ -1,7 +1,7 @@
-Meteor.subscribe("schools");
+Meteor.subscribe("categories");
 
-Template.schools.helpers({
-	schools: function () {
-		return Schools.find().fetch();
+Template.category.helpers({
+	cats: function() {
+		return Categories.find({},{sort: {name: 1} }).fetch();
 	}
 });

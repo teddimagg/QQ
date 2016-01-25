@@ -5,3 +5,7 @@ Meteor.publish("schools", function () {
 Meteor.publish("courses", function() {
 	return Courses.find();
 });
+
+Meteor.publish("categories", function() {
+	return Categories.find();
+});

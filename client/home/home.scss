@@ -12,47 +12,58 @@
 	outline: none;
 }
 
-.schoolview
+.catcont
 {
-	width: 100%;
-	height: 150px;
-	background-color: $blue;
-	border-radius: 15px;
+	margin: 15px -10px;
 
-    overflow: auto;
-    overflow-y: hidden;
+	width: calc(100% + 15px);
+	//background-color: $blue;
+	//border-radius: 15px;
+
     //margin: 0 auto;
-    white-space: nowrap;
+    //white-space: nowrap;
 
-    &::-webkit-scrollbar { 
-    display: none; 
+    &::-webkit-scrollbar 
+    { 
+    	display: none; 
 	}
 
-	.school
+	.catview
 	{
 		display: inline-block;
 
-		height: 150px;
-		width: 150px;
+		border-radius: 15px;
+		height: 0;
+
+		padding-bottom: calc(25% - 20px);
+		width: calc(25% - 20px);
+		margin: 10px;
+
+		background-color: rgba($g, 0.5);
+		float: left;
+
+		transition: all 0.1s ease-in;
 		text-align: center;
 
-		p
-		{
-			display: block;
-			font-size: 12px;
-		}
-
-		img
-		{
-			height: 100px;
-			width: 100px;
-			margin: 10px 25px;
-		}
+		color: $gg;
+		//MUST BE DELIGATED WITH MEDIA SPECIFIER
 
 		&:hover
 		{
-			background-color: rgba(white, 0.3);
+			background-color: $g;
+			color: $blue;
 			cursor: pointer;
+		}
+
+		i
+		{
+			font-size: 100px;
+			margin: 40px 0 20px 10px;
+		}
+
+		p
+		{
+			font-size: 22px;
 		}
 	}
 }

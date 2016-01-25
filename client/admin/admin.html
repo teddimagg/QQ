@@ -16,7 +16,40 @@
 			<option data-id="{{_id}}">{{name}}</option>
 			{{/each}}
 		</select>
-
+		<select name="cat">
+			{{#each cats}}
+			<option data-id="{{_id}}">{{name}}</option>
+			{{/each}}
+		</select>
 		<button type="submit">ADD</button>
 	</form>
+	<h3>Add a category</h3>
+	<form class="adminform addcat">
+		<input type="text" id="name" placeholder="name" required>
+		<input type="text" id="icon" placeholder="Fontawesome name" required>
+		<button type="submit">ADD</button>
+	</form>
+	<div class="adminspan"></div>
+	{{> adminrem}}
+</template>
+
+<template name="adminrem">
+	<ul class="adminlist schoollist">
+	<h3>Schools</h3>
+	{{#each schools}}
+		<li id="{{_id}}">SMEGMA</li>
+	{{/each}}
+	</ul>
+	<ul class="adminlist courselist">
+	<h3>Courses</h3>
+	{{#each courses}}
+		<li>SMEGMA</li>
+	{{/each}}
+	</ul>
+	<ul class="adminlist catlist">
+	<h3>Categories</h3>
+	{{#each cats}}
+		<li id="{{_id}}">{{name}} <i class="fa fa-remove"></i></li>
+	{{/each}}
+	</ul>
 </template>
