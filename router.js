@@ -17,3 +17,11 @@ Router.route('/', function () {
 Router.route('/admin', function () {
     this.render('admin');
 });
+
+Router.route('/school/:_id', {
+	template: 'school',
+	data: function(){
+		var currentEvent = this.params._id;
+		return Schools.findOne({ _id: currentEvent});
+	}
+});

@@ -11,3 +11,48 @@
 
 	outline: none;
 }
+
+.schoolview
+{
+	width: 100%;
+	height: 150px;
+	background-color: $blue;
+	border-radius: 15px;
+
+    overflow: auto;
+    overflow-y: hidden;
+    //margin: 0 auto;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar { 
+    display: none; 
+	}
+
+	.school
+	{
+		display: inline-block;
+
+		height: 150px;
+		width: 150px;
+		text-align: center;
+
+		p
+		{
+			display: block;
+			font-size: 12px;
+		}
+
+		img
+		{
+			height: 100px;
+			width: 100px;
+			margin: 10px 25px;
+		}
+
+		&:hover
+		{
+			background-color: rgba(white, 0.3);
+			cursor: pointer;
+		}
+	}
+}

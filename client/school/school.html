@@ -1,0 +1,17 @@
+<template name="school">
+	<div class="schoolhead">
+		<img src="{{img}}"/>
+		<h2>{{name}}</h2>
+	</div>
+	{{> courses}}
+</template>
+
+<template name="courses">
+	<div class="courses">
+		<ul>
+		{{#each course}}
+			<li>{{name}}</li>
+		{{/each}}
+		</ul>
+	</div>
+</template>
