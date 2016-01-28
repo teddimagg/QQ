@@ -18,10 +18,10 @@ Router.route('/admin', function () {
     this.render('admin');
 });
 
-Router.route('/school/:_id', {
-	template: 'school',
+Router.route('/category/:_id', {
+	template: 'category',
 	data: function(){
-		var currentEvent = this.params._id;
-		return Schools.findOne({ _id: currentEvent});
+		var current = this.params._id;
+		return Categories.findOne({ _id: current});
 	}
 });

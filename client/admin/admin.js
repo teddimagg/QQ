@@ -44,26 +44,36 @@ Template.admin.onRendered(function(){
 
 Template.admin.helpers({
 	schools: function () {
-		return Schools.find().fetch();
+		return Schools.find({},{sort: {name: 1}}).fetch();
 	},
 	cats: function() {
-		return Categories.find().fetch();
+		return Categories.find({},{sort: {name: 1}}).fetch();
 	}
 });
 
 Template.adminrem.helpers({
 	schools: function () {
-		return Schools.find().fetch();
+		return Schools.find({},{sort: {name: 1}}).fetch();
 	},
 	courses: function() {
-		return Courses.find().fetch();
+		return Courses.find({},{sort: {name: 1}}).fetch();
 	},
 	cats: function() {
-		return Categories.find().fetch();
+		return Categories.find({},{sort: {name: 1}}).fetch();
 	}
 });
 
 Template.adminrem.events({
+	'click .schoollist li': function(){
+       if (window.confirm("Are you sure you want to remove this school?")) {
+            Schools.remove(this._id);
+        }
+	},
+	'click .courselist li': function(){
+       if (window.confirm("Are you sure you want to remove this course?")) {
+            Courses.remove(this._id);
+        }
+	},
 	'click .catlist li': function(){
        if (window.confirm("Are you sure you want to remove this category?")) {
             Categories.remove(this._id);

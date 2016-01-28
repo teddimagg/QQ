@@ -4,16 +4,18 @@
 
     <input type="text" class="homesearch" placeholder="Search for school, course or courseid. example: 'Reykjavík University' or 'Linear Algebra'" />
 
-    {{> category}}
+    {{> categories}}
 </template>
 
-<template name="category">	
+<template name="categories">	
 	<div class="catcont">
 	{{#each cats}}
+	<a href="/category/{{_id}}">
 		<div class="catview">
 			<i class="fa fa-{{icon}}"></i>
 			<p>{{name}}</p>
 		</div>
+	</a>
 	{{/each}}
 	</div>
 </template>

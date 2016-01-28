@@ -1,6 +1,6 @@
 Meteor.subscribe("categories");
 
-Template.category.helpers({
+Template.categories.helpers({
 	cats: function() {
 		return Categories.find({},{sort: {name: 1} }).fetch();
 	}

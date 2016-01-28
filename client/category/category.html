@@ -1,0 +1,24 @@
+<template name="category">
+<div class="catheader">
+	<h1>{{name}}</h1>
+	<i class="fa fa-{{icon}}"></i>
+</div>
+<input type="text" class="homesearch" placeholder="Search for courses and schools within {{name}}" />
+
+<table class="cattable">
+<thead>
+	<td>Course ID</td>
+	<td>Name</td>
+	<td>School</td>
+	<td>No. questions</td>
+</thead>
+{{#each courses}}
+<tr>
+	<td>{{courseid}}</td>
+	<td>{{name}}</td>
+	<td>{{findschool}}</td>
+	<td>{{noques}}</td>
+</tr>
+{{/each}}	
+</table>
+</template>

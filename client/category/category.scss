@@ -1,0 +1,44 @@
+@import "../../default";
+
+.catheader
+{
+	h1
+	{
+		display: inline-block;
+	}
+
+	i
+	{
+		color: $gg;
+		margin-top: 20px;
+		float: right;
+		font-size: 35px;
+		display: inline-block;
+	}
+}
+
+.cattable
+{
+	width: 100%;
+	font-size: 18px;
+	margin-top: 20px;
+
+	thead
+	{
+		font-weight: 600;
+	}
+
+	tr
+	{
+		transition: all 0.1s ease-in;
+		cursor: pointer;
+
+		&:nth-child(2n+3) {background-color: rgba(white, 0.4);}
+		&:hover {background-color: $blue}
+	}
+
+	td
+	{
+		padding: 6px;
+	}	
+}
